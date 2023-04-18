@@ -18,10 +18,10 @@
                 <label for="menu-toggle"><i class='bx bx-menu'></i></label>
                 <input type="checkbox" id="menu-toggle" />
                 <ul class="links">
-                    <li><a href="">Product 1</a></li>
-                    <li><a href="">Product 2</a></li>
-                    <li><a href="">Product 3</a></li>
-                    <li><a href="">Product 4</a></li>
+                    <li><a href="" title="products link">Product 1</a></li>
+                    <li><a href="" title="products link">Product 2</a></li>
+                    <li><a href="" title="products link">Product 3</a></li>
+                    <li><a href="" title="products link">Product 4</a></li>
                 </ul>
 
             </nav>
@@ -60,160 +60,55 @@
             <hr size="1px">
             <br>
             
-            <div class="card-container">
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="card">
-                        <div id="card">
-                        <div class="card-img">
-                            <img src="https://via.placeholder.com/300x300" alt="">
-                        </div>
-                        <div class="card-detail">
-                            <h2>Name</h2>
-                            <p>Category</p>
-                            <p>$ 99.00</p>
-                        </div>
-                    </div>
-                </a>
-                
-                
-                
+            <div id="card-container" class="card-container">
+                <!-- Cards -->
+                <script>
+                    let cards = "";
+                    for ( i = 0; i < 12; i++) {
+                        cards += `
+                        <a href="" id="card" class="card">
+                            <div>
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/300x300" loading="lazy" draggable="false" alt="product-img"
+                                            title="product-img">
+                                </div>
+                                <div class="card-detail">
+                                    <h2 title="product-name">Name</h2>
+                                    <p title="category">Category</p>
+                                    <p title="price">$ 99.00</p>
+                                </div>
+                            </div>
+                        </a> `; 
+                    }
+                    document.getElementById('card-container').innerHTML = cards;
+                </script>
+                <!-- Cards End-->
             </div>
-
-
+        </div>
+        <div class="see-more">
+            <button class="btn">See More</button>
         </div>
     </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>FAST G</h3>
+            <p>Fast G — Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate praesentium ratione nisi itaque reiciendis adipisci neque at, hic dolorum ipsa.</p>
+        </div>
 
+        <ul class="socials">
+            <li><a href=""><i class='bx bxl-facebook-square'></i></a></li>
+            <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+            <li><a href=""><i class='bx bxl-telegram'></i></a></li>
+            <li><a href=""><i class='bx bxs-phone'></i></a></li>
+            <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
+         </ul>
+        
+        <div class="footer-bottom">
+            <p>copyright &copy;2023</p>
+         </div>
+    </footer>
+    <!-- Footer End -->
     <script src="js/main.js"></script>
 </body>
 </html>

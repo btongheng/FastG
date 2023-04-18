@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>FAST G</title>
+</head>
+<body>
+    <header class="sticky">
+        <div class="header">
+            <div class="brand">
+                <a href="">FAST G</a>
+            </div>
+            <nav>
+                <label for="menu-toggle"><i class='bx bx-menu'></i></label>
+                <input type="checkbox" id="menu-toggle" />
+                <ul class="links">
+                    <li><a href="" title="products link">Product 1</a></li>
+                    <li><a href="" title="products link">Product 2</a></li>
+                    <li><a href="" title="products link">Product 3</a></li>
+                    <li><a href="" title="products link">Product 4</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Slide Image End -->
+                <div class="slider">
+                    <div class="slide fade">
+                        <div class="slideDetails">
+                            <a href=""><img src="https://via.placeholder.com/1200x260" alt="pic" draggable="false"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="slide fade">
+                        <div class="slideDetails">
+                            <a href=""><img src="https://via.placeholder.com/1200x260" alt="pic" draggable="false"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="slide fade">
+                        <div class="slideDetails">
+                            <a href=""><img src="https://via.placeholder.com/1200x260" alt="pic" draggable="false"></a>
+                        </div>
+                    </div>
+                    <div class="center">
+                      <span class="dot fade" onclick="currentSlide(1)"></span>
+                      <span class="dot fade" onclick="currentSlide(2)"></span>
+                      <span class="dot fade" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            <!-- Slide Image End -->
+
+            <br>
+            <hr size="1px">
+            <br>
+            
+            <div id="card-container" class="card-container">
+                <!-- Cards -->
+                <script>
+                    let cards = "";
+                    for ( i = 0; i < 12; i++) {
+                        cards += `
+                        <a href="" id="card" class="card">
+                            <div>
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/300x300" loading="lazy" draggable="false" alt="product-img"
+                                            title="product-img">
+                                </div>
+                                <div class="card-detail">
+                                    <h2 title="product-name">Name</h2>
+                                    <p title="category">Category</p>
+                                    <p title="price">$ 99.00</p>
+                                </div>
+                            </div>
+                        </a> `; 
+                    }
+                    document.getElementById('card-container').innerHTML = cards;
+                </script>
+                <!-- Cards End-->
+            </div>
+        </div>
+        <div class="see-more">
+            <button class="btn">See More</button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>FAST G</h3>
+            <p>Fast G — Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate praesentium ratione nisi itaque reiciendis adipisci neque at, hic dolorum ipsa.</p>
+        </div>
+
+        <ul class="socials">
+            <li><a href=""><i class='bx bxl-facebook-square'></i></a></li>
+            <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+            <li><a href=""><i class='bx bxl-telegram'></i></a></li>
+            <li><a href=""><i class='bx bxs-phone'></i></a></li>
+            <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
+         </ul>
+        
+        <div class="footer-bottom">
+            <p>copyright &copy;2023</p>
+         </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -176,9 +176,6 @@ header .header nav i {
     }
 }
 @media screen and (max-width:375px) {
-    .card-container .card img {
-        max-width: 130px;
-    }
     .card-container {
         grid-template-columns: 1fr 1fr;
         grid-gap: .5rem;

@@ -30,17 +30,26 @@ main .container {
 }
 
 header {
+    position: relative;
+    z-index: 1;
     margin-bottom: 12px;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     background-color: var(--header-color);
-    position: sticky;
-    top: 0;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + main {
+    padding-top: 80px;
+  }
+
 header .header {
-    z-index: 100;
     max-width: 1240px;
     height: 70px;
     margin: 0 auto;
@@ -76,13 +85,17 @@ header .header nav i {
     display: none;
   }
 
-header .header .links a {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-color);
-    text-decoration: none;
-}
+  header .header .links a {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all .3s ease-out;
+  }
 
+  header .header .links li a:hover {
+      color: #bbb;
+  }
 .slide {
     display: none;
 }
@@ -274,7 +287,7 @@ header .header .links a {
     
     header .header nav .links {
         position: fixed;
-        width: 100%;
+        width: 70%;
         height: 100vh;
         top: 60px;
         left: -100%;
@@ -282,17 +295,17 @@ header .header .links a {
         display: flex;
         gap: 1rem;
         padding: 1rem;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         background-color: var(--bgcolor);
         transition: all .5s ease-in-out;
     }
 
     header .header nav .links li {
-        padding: 1rem 0;
+        padding: 1rem;
     }
     
-    #menu-toggle:checked + .links {
+    #menu-toggle:checked ~ .links, .card {
         left: 0;
       }
 }
